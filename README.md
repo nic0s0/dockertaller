@@ -1,13 +1,13 @@
 # dockertaller
 Dockers FTP: lftp (cliente) y proftpd (servidor)
   
-Pre-requisito: docker
-  
+Pre-requisito: docker  
+Build: ambos sin parametros
   
 **- Cliente:**
 En carpeta "client" se encuentra el dockerfile para crear la imagen ubuntu de lftp.  
   
-Corre con:
+Run:
 ```
 docker run -it CONTAINER_ID lftp user:pass@ip
 ```
@@ -19,8 +19,9 @@ En este caso se usarán user=userftp, pass=passftp e ip=172.17.0.2 como default.
   
   
 **- Servidor:**
-En carpeta "server" se encuentra el dockerfile para crear la imagen ubuntu de proftpd.
-Corre con:
+En carpeta "server" se encuentra el dockerfile para crear la imagen ubuntu de proftpd.  
+  
+Run:
 ```
 docker run -it CONTAINER_ID
 ```
