@@ -3,6 +3,7 @@ Dockers FTP: lftp (cliente) y proftpd (servidor)
 
 Pre-requisito: docker
 
+
 - Cliente:
 En carpeta "client" se encuentra el dockerfile para crear la imagen del cliente.
 Corre con:
@@ -14,6 +15,7 @@ Con parametros default:
 docker run -it CONTAINER_ID
 ```
 En este caso se usarán user=userftp y pass=passftp como default
+
 
 - Servidor:
 En carpeta "server" se encuentra el dockerfile para crear la imagen del servidor.
