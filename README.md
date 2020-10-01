@@ -20,7 +20,7 @@ En este caso se usarán user=userftp, pass=passftp e ip=172.17.0.2 como default.
   
 **- Servidor:**
 En carpeta "server" se encuentra el dockerfile para crear la imagen ubuntu de proftpd.  
-  
+La imagen contiene el user=userftp y pass=passftp. Credenciales para logear desde un cliente.    
 Run:
 ```
 docker run -it CONTAINER_ID
