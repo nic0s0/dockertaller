@@ -6,6 +6,7 @@ Pre-requisito: docker
   
 **- Cliente:**
 En carpeta "client" se encuentra el dockerfile para crear la imagen ubuntu de lftp.
+__
 Corre con:
 ```
 docker run -it CONTAINER_ID lftp user:pass@ip
