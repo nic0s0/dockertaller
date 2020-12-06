@@ -1,0 +1,19 @@
+#FTP PCRE 
+#user root correcto (userftp) LISTO
+#alert tcp any any -> 172.17.0.2 21 (pcre:"/user\s+userftp/i"; msg:"FTP user root correcto"; sid:1000001; rev:1;)
+
+#FTP flow
+#intento de logeo con usuario "root" LISTO
+#alert tcp any any -> 172.17.0.2 21 (content:"USER root"; flow:to_server,established; msg:"FTP intento de logeo ROOT"; sid:1000002; rev:1;)
+
+#FTP offset
+#pass igual a root (passftp) LISTO
+#alert tcp any any -> 172.17.0.2 21 (content:"passftp"; offset:5; msg:"FTP pass de root"; sid:1000003; rev:1;)
+
+#FTP isdataat LISTO
+#nombre de directorio a crear muy largo
+#alert tcp any any -> 172.17.0.2 21 (content:"MKD"; isdataat:10,relative; content:" "; within:10; msg:"MKDIR largo"; sid:1000004; rev:1;)
+
+#FTP distance
+#intento de RMDIR de una carpeta en especifico
+#alert tcp any any -> 172.17.0.2 21 (content:"RMD"; content:"."; distance:1; msg:"FTP borrar carpeta de system"; sid:1000005; rev:1;)
