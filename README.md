@@ -34,3 +34,5 @@ docker run -dit CONTAINER_ID
 Video de demostración : [Youtube](https://www.youtube.com/watch?v=FxOE4MwxUVA)
 
 Video de intercepción de paquetes con Polymorph : [Youtube](https://www.youtube.com/watch?v=OJjstmtbaYc)
+
+Video de reglas y alertas con Snort: [Youtube](https://youtu.be/fTh0Yz1nwTo)
